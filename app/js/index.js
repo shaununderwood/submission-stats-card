@@ -5,7 +5,7 @@
   // TODO: consider moving these constants and features out to a separate store
   // NOTE: Moving image implementation out to the css was a good move
 
-  const CONSTANTS = {
+  var CONSTANTS = {
     ERRORS: {
       FAILED_TO_INITIALISE: 'Sorry, but the application was not able to start.'
     },
@@ -20,7 +20,7 @@
       }
     }
   };
-  const FEATURES = {
+  var FEATURES = {
     PLAYER_SELECT_TAG:    '#player-selector',
     PLAYER_IMGAGE_TAG:    '#player-image',
     PLAYER_BADGE_TAG:     '#team-badge',
@@ -35,22 +35,22 @@
 
   function renderSelectOptions( options ){
     // clear player select and append new options
-    let select = $(FEATURES.PLAYER_SELECT_TAG);
+    var select = $(FEATURES.PLAYER_SELECT_TAG);
     select.children().remove();
 
-    let length = options.length;
-    for(let i=0;i<length;i++){
+    var length = options.length;
+    for(var i=0;i<length;i++){
       select.append( options[i] );
     }
   }
 
   function populateSelectWithOptions( players ){
-    let sortedPlayers = sortPlayersByNameThenSurname( players );
-    let options = [ ];
+    var sortedPlayers = sortPlayersByNameThenSurname( players );
+    var options = [ ];
 
     // build up options for the select tag
-    for( let idx in sortedPlayers ){
-      let player = sortedPlayers[idx];
+    for( var idx in sortedPlayers ){
+      var player = sortedPlayers[idx];
       options.push( newOption( player.player ) );
     }
 
@@ -85,9 +85,9 @@
     $( FEATURES.PLAYER_BADGE_TAG  ).removeClass( 'badge-' +appData.currentPlayer.player.currentTeam.id ).addClass( 'badge-' +appData.nextPlayer.player.currentTeam.id );
 
     // set stats
-    let statKeys = Object.keys( appData.nextPlayer.stats );
-    for( let stat in statKeys ){
-      let selector = FEATURES.STAT_PREFIX + appData.nextPlayer.stats[stat].name; // stat elements must have the id set to the stat.name
+    var statKeys = Object.keys( appData.nextPlayer.stats );
+    for( var stat in statKeys ){
+      var selector = FEATURES.STAT_PREFIX + appData.nextPlayer.stats[stat].name; // stat elements must have the id set to the stat.name
       $(selector).text( appData.nextPlayer.stats[stat].value );
     }
 
@@ -115,26 +115,26 @@
     appData.playerMapById = {};
 
     // build map for renderPlayer and select.option.value
-    let idx = appData.players.length;
-    for( let i=0; i<idx;i++){
-      let aPlayer = appData.players[i];
+    var idx = appData.players.length;
+    for( var i=0; i<idx;i++){
+      var aPlayer = appData.players[i];
       appData.playerMapById[ aPlayer.player.id ] = aPlayer;
     }
 
     // render default player
-    let defaultPlayer = appData.players[0].player.id;
+    var defaultPlayer = appData.players[0].player.id;
     renderPlayer( defaultPlayer );
 
     return appData.players;
   }
 
   function receiveDataAndBootstrapApp( data ){
-    let players = updatePlayerCards( data );
+    var players = updatePlayerCards( data );
 
     populateSelectWithOptions( players );
 
     $( FEATURES.PLAYER_SELECT_TAG ).on( 'change', function( data ){
-      let playerId = data.target.value;
+      var playerId = data.target.value;
       renderPlayer( playerId );
     });
     $( FEATURES.PLAYER_SELECT_TAG ).trigger('change');
