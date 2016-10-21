@@ -11,8 +11,8 @@
     "build": "npm i && bower i && npm run project"
   },
   "defaultPort": 16234,
-  "author": "",
-  "license": "ISC",
+  "author": "Shaun Underwood <shaun@sunderwood.co.uk>",
+  "license": "private",
   "devDependencies": {
     "connect": "^3.5.0",
     "node-sass": "^3.10.1",
