@@ -1,6 +1,11 @@
 #Football Assignment
 
 ##Get Running
+
+Unzip the file or clone the repo here
+
+	git clone https://github.com/shaununderwood/submission-stats-card
+
 Navigate to the project's folder and type the following:
 
 	npm run build 
