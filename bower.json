@@ -1,0 +1,21 @@
+{
+  "name": "player-stats-card",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "shaun <shaun@sunderwood.co.uk>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jqlite": "jstools-jqlite#^0.2.39"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "player-stats-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss app/css/styles.scss app/css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "project": "open-url localhost:16234 && node server",
+    "build": "npm i && bower i && npm run project"
+  },
+  "defaultPort": 16234,
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "connect": "^3.5.0",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0",
+    "open-url": "^2.0.2",
+    "serve-static": "^1.11.1"
+  }
+}

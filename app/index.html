@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Player Stats Card</title>
+  <script> /* 0.3.5 */ function pegasus(a,b,c){return c=new XMLHttpRequest,c.open("GET",a),a=[],pegasus.timeout&&(c.timeout=pegasus.timeout),c.ontimeout=function(a){b=a},c.onreadystatechange=c.then=function(d,e,f,g){if(d&&d.call&&(a=[,d,e]),b&&a[2]&&a[2](b,c),4==c.readyState&&(f=a[0|c.status/200])){try{g=JSON.parse(c.responseText)}catch(a){g=null}f(g,c)}},c.send(),c}</script>
+  <script src="vendors/jqlite/jqlite.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="player-selector-holder">
+      <select id="player-selector">
+        <option>nothing</option>
+      </select>
+    </div>
+  </header>
+
+  <section>
+    <div class="player-image-holder">
+      <div id="player-image"></div>
+    </div>
+  </section>
+
+  <footer>
+
+    <div class="badge-holder">
+      <div class="badge-background">
+        <div id="team-badge"></div>
+      </div>
+    </div>
+
+    <div class="player-info-holder">
+      <p id="player-name"></p>
+      <p id="player-position"></p>
+    </div>
+
+    <div class="stats-holder">
+
+
+        <ul>
+        <li>
+          <span class="stat-label">Goals</span>
+          <span class="stat-value" id="stat-goals"></span>
+        </li>
+        <li>
+          <span class="stat-label">Losses</span>
+          <span class="stat-value" id="stat-losses"></span>
+        </li>
+        <li>
+          <span class="stat-label">Wins</span>
+          <span class="stat-value" id="stat-wins"></span>
+        </li>
+        <li>
+          <span class="stat-label">Forward Passes</span>
+          <span class="stat-value" id="stat-fwd_pass"></span>
+        </li>
+        <li>
+          <span class="stat-label">Goal Assist</span>
+          <span class="stat-value" id="stat-goal_assist"></span>
+        </li>
+        <li>
+          <span class="stat-label">Appearences</span>
+          <span class="stat-value" id="stat-appearances"></span>
+        </li>
+        <li>
+          <span class="stat-label">Minutes Played</span>
+          <span class="stat-value" id="stat-mins_played"></span>
+        </li>
+        <li>
+          <span class="stat-label">Backwards Passes</span>
+          <span class="stat-value" id="stat-backward_pass"></span>
+        </li>
+      </ul>
+
+    </div>
+
+  </footer>
+
+</div>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

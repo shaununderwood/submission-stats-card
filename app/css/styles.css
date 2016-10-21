@@ -1,0 +1,106 @@
+body {
+  background: white;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0; }
+  body .container .player-selector-holder {
+    background: gainsboro;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1em; }
+  body .container section {
+    width: 100%;
+    height: 280px;
+    background: white; }
+    body .container section .player-image-holder {
+      height: 280px;
+      width: 220px; }
+      body .container section .player-image-holder .player-image {
+        width: 100%;
+        height: 100%; }
+  body .container footer {
+    background: #EC0050;
+    color: white;
+    padding: 10px; }
+    body .container footer .badge-holder {
+      position: relative;
+      background: white;
+      width: 100px;
+      height: 100px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      top: -50px;
+      float: right;
+      overflow: hidden; }
+      body .container footer .badge-holder .badge-background {
+        width: 100%;
+        height: 100%; }
+    body .container footer .player-info-holder {
+      margin: 10px 0 5px 10px; }
+      body .container footer .player-info-holder p {
+        margin: 0 0 10px; }
+      body .container footer .player-info-holder #player-name {
+        font-size: 1.2em; }
+    body .container footer .stats-holder ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%; }
+      body .container footer .stats-holder ul li {
+        height: 25px;
+        line-height: 25px;
+        padding: 10px;
+        width: 90%;
+        background-color: #EAEAEA;
+        color: black;
+        margin: 2px 0; }
+        body .container footer .stats-holder ul li .stat-value {
+          display: inline-block;
+          float: right;
+          font-weight: bold; }
+        body .container footer .stats-holder ul li .stat-label {
+          float: left;
+          display: inline-block; }
+
+.player-p2064 {
+  background-image: url("../assets/p2064.png") !important;
+  height: 100%; }
+
+.player-p4148 {
+  background-image: url("../assets/p4148.png");
+  height: 100%; }
+
+.player-p4246 {
+  background-image: url("../assets/p4246.png");
+  height: 100%; }
+
+.player-p4916 {
+  background-image: url("../assets/p4916.png");
+  height: 100%; }
+
+.player-p8983 {
+  background-image: url("../assets/p8983.png");
+  height: 100%; }
+
+.badge-1 {
+  background: url("../assets/badges_sprite.png") 2300px 1000px;
+  height: 100%; }
+
+.badge-26 {
+  background: url("../assets/badges_sprite.png") 0px 0px;
+  height: 100%; }
+
+.badge-21 {
+  background: url("../assets/badges_sprite.png") 700px 2300px;
+  height: 100%; }
+
+.badge-12 {
+  background: url("../assets/badges_sprite.png") 600px 2500px;
+  height: 100%; }
+
+.badge-11 {
+  background: url("../assets/badges_sprite.png") 400px 2600px;
+  height: 100%; }
